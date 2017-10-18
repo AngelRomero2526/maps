@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+	color : #f44250;
+	font-size: 40px;
+}
+</style>
+</head>
+<body>
+
+<h1 align = "center"> Where I've Been</h1>
+<p>This is where I've been and to be honest I don't really know where to go, but if I do I'll try to put it down somewhere. But I love going on these places because I know them or they were 
+new to go to for summer vacation. And Im excited to go to new ones in the future where I dont know whats going to happen.</P>
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+
+var mapCenter = new google.maps.LatLng(34.1161,-118.1503);
+
+var mapProp= {
+	center:mapCenter,
+	zoom:15,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+//South Pasadena
+var southpasadena = new google.maps.LatLng(34.1161, -118.1503);
+
+var pyMarker = new google.maps.Marker({position:southpasadena});
+pyMarker.setMap(map);
+	google.maps.event.addListener(pyMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"I live with my mother, home."
+	});
+	infowindow.open(map,pyMarker);
+	});
+
+//Pasadena
+var pasadena = new google.maps.LatLng(34.1478, -118.1445);
+
+var arMarker = new google.maps.Marker({position:pasadena});
+arMarker.setMap(map);
+	google.maps.event.addListener(arMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"I live with my father, home."
+	});
+	infowindow.open(map,arMarker);
+	});
+
+//Redding
+var redding = new google.maps.LatLng(40.5865, -122.3917);
+
+var dpMarker = new google.maps.Marker({position:redding});
+dpMarker.setMap(map);
+	google.maps.event.addListener(dpMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"Vacation like a noob!"
+	});
+	infowindow.open(map,dpMarker);
+	});
+
+//Maui
+var maui = new google.maps.LatLng(20.7984, -156.3319);
+
+var maMarker = new google.maps.Marker({position:maui});
+maMarker.setMap(map);
+	google.maps.event.addListener(maMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"Vacation like a boss!"
+	});
+	infowindow.open(map,maMarker);
+	});
+
+//Las Vegas
+var lasvegas = new google.maps.LatLng(36.1699, -115.1398);
+
+var fuMarker = new google.maps.Marker({position:lasvegas});
+fuMarker.setMap(map);
+	google.maps.event.addListener(fuMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"Vacation like a douce!"
+	});
+	infowindow.open(map,fuMarker);
+	});
+
+//Palm Springs
+var palmsprings = new google.maps.LatLng(33.8303, -116.5453);
+
+var rdMarker = new google.maps.Marker({position:palmsprings});
+rdMarker.setMap(map);
+	google.maps.event.addListener(rdMarker,'click',function(){
+	var infowindow = new google.maps.InfoWindow({
+		content:"Vacation like a semi-noob!"
+	});
+	infowindow.open(map,rdMarker);
+	});
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+<center> <li>South Pasadena</li>
+<p>This is one place that I live with my mother. It's a nice place in a nice town and also there is a restaurant opening up "Blaze Pizza."</p>
+<center> <img src="South Pasadena.jpg" height="200" width="200">
+<center> <li>Pasadena</li>
+<p>This is another place that I live, but with my father. It's ok there I know a nice movie place for cheep.</p>
+<center> <img src="Pasadena.jpg" height="200" width="200">
+<center> <li>Palm Springs</li>
+<p>Nice, warm place to get out with family and friends. And also a nice seafood restaurant, don't remember where but I know there was a statue nearby</p>
+<center> <img src="Palm Springs.jpg" height="200" width="200">
+<center> <li>Redding</li>
+<p>Only went there a couple times its a okay place. Do u know that big thing is a actual a sundial. Neat.</p>
+<center> <img src="Redding.jpg" height="200" width="200">
+<center> <li>Las Vegas</li>
+<p>Where you can win or lose it all! So get all you money and loans from the bank because if u go there u better be good at the games.</p>
+<center> <img src="Las Vegas.jpg" height="200" width="200">
+<center> <li>Maui</li>
+<p>Now this is a place you can get used to. And once you leave and go back home I swear its makes you think "wow I live in a normal place."</p>
+<center> <img src="Maui.jpg" height="200" width="200">
+
+
+
+
+
+
+</body>
+</html>
